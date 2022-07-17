@@ -24,8 +24,9 @@ galleryContainer.addEventListener("click", openImageClick);
 
 function openImageClick(e) {
   e.preventDefault();
+
   const modal = basicLightbox.create(
-    `<img scr='${e.target.dataset.source}' width='800' height='600'>`,
+    `<img scr= "${e.target.dataset.source}" width="800" height="600">`,
     {
       onShow: () => window.addEventListener("keydown", onPressKeyESC),
       onclose: () => window.removeEventListener("keydown", onPressKeyESC),
